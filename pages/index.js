@@ -15,7 +15,7 @@ export default function Home() {
     const options = {
       method: 'GET',
       headers: {
-        'Authorization': authToken
+        'Authorization': `Bearer ${authToken}`
       }
     };
 
