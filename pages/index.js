@@ -15,7 +15,7 @@ export default function Home() {
     const options = {
       method: 'GET',
       headers: {
-        'Authorization': `Bearer ${authToken}`
+        'Authorization': authToken
       }
     };
 
@@ -34,6 +34,48 @@ export default function Home() {
       <Head>
         <title>Next.js Starter!</title>
         <link rel="icon" href="/favicon.ico" />
+        <style>{`
+          .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 2rem;
+            font-family: Arial, sans-serif;
+          }
+          main {
+            text-align: center;
+          }
+          .form-group {
+            margin-bottom: 1rem;
+          }
+          label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: bold;
+          }
+          input {
+            width: calc(100% - 2rem);
+            padding: 0.5rem;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+          }
+          button {
+            background-color: #0070f3;
+            color: white;
+            padding: 0.75rem 1.5rem;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+          }
+          button:hover {
+            background-color: #005bb5;
+          }
+          .response {
+            margin-top: 2rem;
+            text-align: left;
+            word-break: break-word;
+          }
+        `}</style>
       </Head>
 
       <main>
@@ -43,7 +85,7 @@ export default function Home() {
         </p>
 
         <form onSubmit={handleSubmit}>
-          <div>
+          <div className="form-group">
             <label htmlFor="authToken">Auth Token:</label>
             <input
               type="text"
@@ -53,7 +95,7 @@ export default function Home() {
               required
             />
           </div>
-          <div>
+          <div className="form-group">
             <label htmlFor="appId">App ID:</label>
             <input
               type="text"
