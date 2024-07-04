@@ -91,12 +91,13 @@ export default function Home() {
               type="text"
               id="authToken"
               value={authToken}
+              placehold="Sem o prefixo 'Bearer'"
               onChange={(e) => setAuthToken(e.target.value)}
               required
             />
           </div>
           <div className="form-group">
-            <label htmlFor="appId">App ID:</label>
+            <label htmlFor="appId">Phone Id:</label>
             <input
               type="text"
               id="appId"
