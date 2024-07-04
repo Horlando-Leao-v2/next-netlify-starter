@@ -91,7 +91,7 @@ export default function Home() {
               type="text"
               id="authToken"
               value={authToken}
-              placehold="Sem o prefixo 'Bearer'"
+              placeholder="Sem o prefixo 'Bearer'"
               onChange={(e) => setAuthToken(e.target.value)}
               required
             />
