@@ -79,9 +79,9 @@ export default function Home() {
       </Head>
 
       <main>
-        <Header title="Welcome to my app!" />
+        <Header title="Atendimento Automatizado" />
         <p className="description">
-          Get started by editing <code>pages/index.js</code>
+          Teste seu aplicativo WABA na META
         </p>
 
         <form onSubmit={handleSubmit}>
